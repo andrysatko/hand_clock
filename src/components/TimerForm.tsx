@@ -62,7 +62,7 @@ const TimeForm: React.FC<TimeFormProps> = ({ setTime }) => {
 
   return (
     <form onSubmit={handleSubmit} className="submitForm">
-      <div>
+      <div className="input-container">
         <label>Hours:</label>
         <input
           type="number"
@@ -71,9 +71,9 @@ const TimeForm: React.FC<TimeFormProps> = ({ setTime }) => {
           onChange={handleChange}
         />
       </div>
-      {formErrors.hours && <p>{formErrors.hours}</p>}
+      {formErrors.hours && <p className="input-error">{formErrors.hours}</p>}
 
-      <div>
+      <div className="input-container">
         <label>Minutes:</label>
         <input
           type="number"
@@ -83,7 +83,7 @@ const TimeForm: React.FC<TimeFormProps> = ({ setTime }) => {
         />
       </div>
       {formErrors.minutes && (
-        <p>{formErrors.minutes}</p>
+        <p className="input-error">{formErrors.minutes}</p>
       )}
       <button type="submit">Submit</button>
     </form>
