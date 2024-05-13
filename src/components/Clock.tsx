@@ -10,8 +10,8 @@ const Clock: React.FC<ClockProps> = ({ hours, minutes }) => {
   return (
     <div>
       <h1>
-        {hours}:
-        {minutes}
+        {hours.toString().padStart(2, "0")}:
+        {minutes.toString().padStart(2, "0")}
       </h1>
       <div className="clock">
         <div className="hours-container">

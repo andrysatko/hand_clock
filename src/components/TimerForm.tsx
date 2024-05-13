@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
-
+import { ClockState } from "../pages/ClockPage";
+import "./timeForm.css";
 interface TimeFormProps {
-  setTime: (time: any) => void;
+  setTime: (time: ClockState) => void;
 }
 type TimeVerrors = {
   hours: string | undefined;
   minutes: string | undefined;
 };
 const TimeForm: React.FC<TimeFormProps> = ({ setTime }) => {
-  const [formValues, setFormValues] = useState({
+  const [formValues, setFormValues] = useState<ClockState>({
     hours: 0,
     minutes: 0,
   });
@@ -60,7 +61,7 @@ const TimeForm: React.FC<TimeFormProps> = ({ setTime }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="submitForm">
       <div>
         <label>Hours:</label>
         <input
