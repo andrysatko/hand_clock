@@ -7,18 +7,6 @@
   position: relative;
   width: 20em;
 }
-.clock.simple:after {
-  background: gr;
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10%;
-  height: 5%;
-  z-index: 10;
-}
 .minutes-container,
 .hours-container,
 .seconds-container {
